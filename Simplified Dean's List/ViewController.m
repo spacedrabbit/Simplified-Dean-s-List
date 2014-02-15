@@ -7,9 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "AddPersonViewController.h"
+#import "University.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) IBOutlet UIButton *addStudent;
+@property (strong, nonatomic) University * nyu;
 
 @end
 
@@ -18,10 +21,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	[self.view setBackgroundColor:[UIColor purpleColor]];
+    self.navigationItem.title = @"Welcome to Dean's List";
+    self.nyu = [University new];
 }
 
 - (IBAction)addStudent:(UIButton *)sender {
+}
+
+- (IBAction)printStudents:(UIButton *)sender {
+    NSLog(@"Students\n-----------");
+    NSLog(@"%@", self.nyu.students);
+}
+- (IBAction)printStaff:(UIButton *)sender {
+    NSLog(@"Staff\n-----------");
+    NSLog(@"%@", self.nyu.staff);
 }
 
 - (void)didReceiveMemoryWarning
@@ -33,15 +46,17 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UIButton *)sender{
     
     if ([[segue identifier] isEqualToString:@"addPerson"]) {
-        NSLog(@"Fine");
-        if ([sender.currentTitle isEqualToString:@"Add Students"]) {
-            NSLog(@"Students");
+        AddPersonViewController * nextView = [segue destinationViewController];
+        
+        if ( [[sender currentTitle] isEqualToString:@"Add Students"] ) {
+            nextView.isStaff = FALSE;
+            nextView.personArray = self.nyu.students;
+            
+        }else{
+            nextView.isStaff = TRUE;
+            nextView.personArray = self.nyu.staff;
         }
     }
-}
-
--(void) justDoSomething{
-    NSLog(@"Doing it");
 }
 
 @end

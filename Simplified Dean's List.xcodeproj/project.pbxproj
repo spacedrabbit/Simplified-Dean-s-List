@@ -25,6 +25,8 @@
 		1486478918AF1EF8004BB93A /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 1486478418AF1EF8004BB93A /* Person.m */; };
 		1486478A18AF1EF8004BB93A /* Staff.m in Sources */ = {isa = PBXBuildFile; fileRef = 1486478618AF1EF8004BB93A /* Staff.m */; };
 		1486478B18AF1EF8004BB93A /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 1486478818AF1EF8004BB93A /* Student.m */; };
+		1486478F18B00D0B004BB93A /* University.m in Sources */ = {isa = PBXBuildFile; fileRef = 1486478E18B00D0B004BB93A /* University.m */; };
+		1486479318B014F1004BB93A /* AddCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1486479218B014F1004BB93A /* AddCourseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,10 @@
 		1486478618AF1EF8004BB93A /* Staff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Staff.m; sourceTree = "<group>"; };
 		1486478718AF1EF8004BB93A /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		1486478818AF1EF8004BB93A /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		1486478D18B00D0B004BB93A /* University.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = University.h; sourceTree = "<group>"; };
+		1486478E18B00D0B004BB93A /* University.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = University.m; sourceTree = "<group>"; };
+		1486479118B014F1004BB93A /* AddCourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCourseViewController.h; sourceTree = "<group>"; };
+		1486479218B014F1004BB93A /* AddCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCourseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,11 +133,10 @@
 				1486475A18AF0A31004BB93A /* AppDelegate.h */,
 				1486475B18AF0A31004BB93A /* AppDelegate.m */,
 				1486475D18AF0A31004BB93A /* Main.storyboard */,
+				1486478D18B00D0B004BB93A /* University.h */,
+				1486478E18B00D0B004BB93A /* University.m */,
 				1486478C18AF1F01004BB93A /* People */,
-				1486478018AF0C73004BB93A /* AddPersonViewController.h */,
-				1486478118AF0C73004BB93A /* AddPersonViewController.m */,
-				1486476018AF0A31004BB93A /* ViewController.h */,
-				1486476118AF0A31004BB93A /* ViewController.m */,
+				1486479018B014D5004BB93A /* ViewControllers */,
 				1486476318AF0A31004BB93A /* Images.xcassets */,
 				1486475218AF0A31004BB93A /* Supporting Files */,
 			);
@@ -178,6 +183,19 @@
 				1486478818AF1EF8004BB93A /* Student.m */,
 			);
 			name = People;
+			sourceTree = "<group>";
+		};
+		1486479018B014D5004BB93A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1486478018AF0C73004BB93A /* AddPersonViewController.h */,
+				1486478118AF0C73004BB93A /* AddPersonViewController.m */,
+				1486476018AF0A31004BB93A /* ViewController.h */,
+				1486476118AF0A31004BB93A /* ViewController.m */,
+				1486479118B014F1004BB93A /* AddCourseViewController.h */,
+				1486479218B014F1004BB93A /* AddCourseViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,10 +296,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1486478A18AF1EF8004BB93A /* Staff.m in Sources */,
+				1486478F18B00D0B004BB93A /* University.m in Sources */,
 				1486476218AF0A31004BB93A /* ViewController.m in Sources */,
 				1486475C18AF0A31004BB93A /* AppDelegate.m in Sources */,
 				1486478918AF1EF8004BB93A /* Person.m in Sources */,
 				1486478B18AF1EF8004BB93A /* Student.m in Sources */,
+				1486479318B014F1004BB93A /* AddCourseViewController.m in Sources */,
 				1486475818AF0A31004BB93A /* main.m in Sources */,
 				1486478218AF0C73004BB93A /* AddPersonViewController.m in Sources */,
 			);

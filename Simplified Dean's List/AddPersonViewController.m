@@ -10,29 +10,34 @@
 #import "Person.h"
 
 @interface AddPersonViewController ()
+
 @property (strong, nonatomic) IBOutlet UITextField *firstName;
 @property (strong, nonatomic) IBOutlet UITextField *lastName;
+@property (weak, nonatomic) IBOutlet UITextField *ssn;
+
+@property (weak, nonatomic) IBOutlet UILabel *confirmationLabel;
+
+@property (strong, nonatomic) IBOutletCollection(UITextField) NSArray *entryFields;
 
 @end
 
-@implementation AddPersonViewController{
-    NSMutableArray *students;
-}
+@implementation AddPersonViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+- (NSMutableArray *)personArray{
+    if (!_personArray) {
+        _personArray = [NSMutableArray array];
     }
-    return self;
+    return _personArray;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.view setBackgroundColor:[UIColor purpleColor]];
-    students = [NSMutableArray array];
+    
+    self.title = self.isStaff ? @"Hire Staff" : @"Enroll Student";
+    
+    [self addDoneButtonToKeyboards];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,22 +48,84 @@
 
 - (IBAction)submit:(UIButton *)sender {
     
+    //refactor this code?
     NSString *firstName = self.firstName.text;
     NSString *lastName = self.lastName.text;
+    NSString *ssn = self.ssn.text;
     
-    if ([firstName isEqualToString:@""] || [lastName isEqualToString:@""]) {
-        NSLog(@"Sorry, not a valid name");
+    if ([firstName isEqualToString:@""] || [lastName isEqualToString:@""] || [ssn isEqualToString:@""]) {
+        [self displayConfirmMessage:@"Sorry, not a valid entry"];
     }
     else{
-    Person * stud = [[Person alloc] initWithName:[NSString stringWithFormat:@"%@ %@", firstName, lastName] SSN:@"999-999-9999" andDOB:Nil];
+        //creating student objects
+        Person * person = [[Person alloc] initWithName:[NSString stringWithFormat:@"%@ %@", firstName, lastName] SSN:ssn andDOB:Nil];
     
-    [students addObject:stud];
-    NSLog(@"%@", students);
+        [self.personArray addObject:person];
+        [self displayConfirmMessage:[NSString stringWithFormat:@"Successfully added %@", person.name]];
+        
     }
     
-    self.firstName.text = @"";
-    self.lastName.text = @"";
+    [self clearTextFields]; // refactored!
+    [self dismissKeyboard];
 
+}
+
+- (IBAction)printArray:(UIButton *)sender {
+    NSLog(@"%@", self.personArray);
+}
+
+/***********************************************
+ 
+    Getting rid of the keyboard
+ 
+ ***********************************************/
+#warning add these to a superclass, have these subclass from it
+//touch anywhere on the view to dismiss
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self dismissKeyboard];
+}
+
+//easy to read method
+-(void)dismissKeyboard{
+    [self.view endEditing:YES];
+}
+
+//click 'return' to dismiss keyboard as well. this method works by delegating control to the ViewController, this is a protocol method
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    //[self dismissKeyboard];
+    return TRUE;
+}
+
+/**********************************************
+ 
+    Working with the labels and text
+ 
+ ***********************************************/
+
+//clearing label on next input
+-(void)textFieldDidBeginEditing:(UITextField *)textField{
+    self.confirmationLabel.text =@"";
+}
+
+//clearing textfield collection
+-(void) clearTextFields{
+    for (UITextField * text in self.entryFields) {
+        text.text = @"";
+    }
+}
+
+//displaying a simply message in a pre-defined label
+-(void) displayConfirmMessage: (NSString *) message{
+    self.confirmationLabel.adjustsFontSizeToFitWidth = TRUE;
+    self.confirmationLabel.textAlignment = NSTextAlignmentCenter;
+    self.confirmationLabel.text = message;
+}
+
+-(void) addDoneButtonToKeyboards{
+    for (UITextField* label in self.entryFields) {
+        label.returnKeyType = UIReturnKeyDone;
+    }
 }
 
 

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddPersonViewController : UIViewController
-
+@interface AddPersonViewController : UIViewController <UITextFieldDelegate>
+    @property (nonatomic) BOOL isStaff;
+    @property (strong, nonatomic) NSMutableArray * personArray;
 @end
