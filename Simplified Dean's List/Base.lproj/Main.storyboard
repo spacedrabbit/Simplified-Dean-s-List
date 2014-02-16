@@ -78,7 +78,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="s4f-S1-go4" kind="push" id="kOG-rq-0k2"/>
+                                    <segue destination="s4f-S1-go4" kind="push" identifier="addCourse" id="kOG-rq-0k2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -196,10 +196,10 @@
             </objects>
             <point key="canvasLocation" x="871" y="-188"/>
         </scene>
-        <!--Add Course View Controller-->
+        <!--Add Courses View Controller-->
         <scene sceneID="g5u-0u-cZA">
             <objects>
-                <viewController id="s4f-S1-go4" customClass="AddCourseViewController" sceneMemberID="viewController">
+                <viewController id="s4f-S1-go4" customClass="AddCoursesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DYr-k9-bbV"/>
                         <viewControllerLayoutGuide type="bottom" id="0YA-I5-jbu"/>
@@ -262,6 +262,9 @@
                                 <state key="normal" title="Submit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addCourse:" destination="s4f-S1-go4" eventType="touchUpInside" id="iFY-mc-9dQ"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" keyboardDismissMode="interactive" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4E-Mk-yoa">
                                 <rect key="frame" x="20" y="349" width="280" height="125"/>
@@ -274,6 +277,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="1ot-ND-lol"/>
+                    <connections>
+                        <outlet property="addCourseResults" destination="N4E-Mk-yoa" id="ahp-lJ-apZ"/>
+                        <outlet property="courseDays" destination="OkH-YG-fdc" id="1FZ-m0-Qe4"/>
+                        <outlet property="courseLocation" destination="CM2-3k-dV8" id="CRL-2h-zRh"/>
+                        <outlet property="courseName" destination="nX2-zq-shz" id="Xjy-lq-94x"/>
+                        <outlet property="courseTimes" destination="Hki-Ml-rvV" id="4TM-E3-1Jm"/>
+                        <outletCollection property="courseTextFields" destination="OkH-YG-fdc" id="gZM-yP-Oz5"/>
+                        <outletCollection property="courseTextFields" destination="Hki-Ml-rvV" id="NM7-Hz-hrZ"/>
+                        <outletCollection property="courseTextFields" destination="CM2-3k-dV8" id="Ggh-ro-UBm"/>
+                        <outletCollection property="courseTextFields" destination="nX2-zq-shz" id="fOc-JV-f7K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ib0-qn-OE2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

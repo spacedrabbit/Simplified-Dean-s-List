@@ -1,5 +1,5 @@
 //
-//  AddCourseViewController.h
+//  DeansMasterViewController.h
 //  Simplified Dean's List
 //
 //  Created by Louis Tur on 2/15/14.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddCourseViewController : UIViewController
+@interface DeansMasterViewController : UIViewController <UITextFieldDelegate>
+
+-(void)dismissKeyboard;
 
 @end

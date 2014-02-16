@@ -6,9 +6,11 @@
 //  Copyright (c) 2014 Louis Tur. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "DeansMasterViewController.h"
 
-@interface AddPersonViewController : UIViewController <UITextFieldDelegate>
-    @property (nonatomic) BOOL isStaff;
-    @property (strong, nonatomic) NSMutableArray * personArray;
+@interface AddPersonViewController : DeansMasterViewController
+
+@property (nonatomic) BOOL isStaff;
+@property (strong, nonatomic) NSMutableArray * personArray;
+
 @end

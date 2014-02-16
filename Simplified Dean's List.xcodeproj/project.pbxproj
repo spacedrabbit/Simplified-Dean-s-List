@@ -26,7 +26,9 @@
 		1486478A18AF1EF8004BB93A /* Staff.m in Sources */ = {isa = PBXBuildFile; fileRef = 1486478618AF1EF8004BB93A /* Staff.m */; };
 		1486478B18AF1EF8004BB93A /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 1486478818AF1EF8004BB93A /* Student.m */; };
 		1486478F18B00D0B004BB93A /* University.m in Sources */ = {isa = PBXBuildFile; fileRef = 1486478E18B00D0B004BB93A /* University.m */; };
-		1486479318B014F1004BB93A /* AddCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1486479218B014F1004BB93A /* AddCourseViewController.m */; };
+		1486479618B071A4004BB93A /* DeansMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1486479518B071A4004BB93A /* DeansMasterViewController.m */; };
+		1486479918B073BD004BB93A /* AddCoursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1486479818B073BD004BB93A /* AddCoursesViewController.m */; };
+		1486479C18B07605004BB93A /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 1486479B18B07605004BB93A /* Course.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,8 +71,12 @@
 		1486478818AF1EF8004BB93A /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		1486478D18B00D0B004BB93A /* University.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = University.h; sourceTree = "<group>"; };
 		1486478E18B00D0B004BB93A /* University.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = University.m; sourceTree = "<group>"; };
-		1486479118B014F1004BB93A /* AddCourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCourseViewController.h; sourceTree = "<group>"; };
-		1486479218B014F1004BB93A /* AddCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCourseViewController.m; sourceTree = "<group>"; };
+		1486479418B071A4004BB93A /* DeansMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeansMasterViewController.h; sourceTree = "<group>"; };
+		1486479518B071A4004BB93A /* DeansMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeansMasterViewController.m; sourceTree = "<group>"; };
+		1486479718B073BD004BB93A /* AddCoursesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddCoursesViewController.h; path = ../AddCoursesViewController.h; sourceTree = "<group>"; };
+		1486479818B073BD004BB93A /* AddCoursesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddCoursesViewController.m; path = ../AddCoursesViewController.m; sourceTree = "<group>"; };
+		1486479A18B07605004BB93A /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
+		1486479B18B07605004BB93A /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +187,8 @@
 				1486478618AF1EF8004BB93A /* Staff.m */,
 				1486478718AF1EF8004BB93A /* Student.h */,
 				1486478818AF1EF8004BB93A /* Student.m */,
+				1486479A18B07605004BB93A /* Course.h */,
+				1486479B18B07605004BB93A /* Course.m */,
 			);
 			name = People;
 			sourceTree = "<group>";
@@ -188,12 +196,14 @@
 		1486479018B014D5004BB93A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				1486478018AF0C73004BB93A /* AddPersonViewController.h */,
-				1486478118AF0C73004BB93A /* AddPersonViewController.m */,
+				1486479418B071A4004BB93A /* DeansMasterViewController.h */,
+				1486479518B071A4004BB93A /* DeansMasterViewController.m */,
 				1486476018AF0A31004BB93A /* ViewController.h */,
 				1486476118AF0A31004BB93A /* ViewController.m */,
-				1486479118B014F1004BB93A /* AddCourseViewController.h */,
-				1486479218B014F1004BB93A /* AddCourseViewController.m */,
+				1486478018AF0C73004BB93A /* AddPersonViewController.h */,
+				1486478118AF0C73004BB93A /* AddPersonViewController.m */,
+				1486479718B073BD004BB93A /* AddCoursesViewController.h */,
+				1486479818B073BD004BB93A /* AddCoursesViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -296,13 +306,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1486478A18AF1EF8004BB93A /* Staff.m in Sources */,
+				1486479918B073BD004BB93A /* AddCoursesViewController.m in Sources */,
 				1486478F18B00D0B004BB93A /* University.m in Sources */,
+				1486479C18B07605004BB93A /* Course.m in Sources */,
 				1486476218AF0A31004BB93A /* ViewController.m in Sources */,
 				1486475C18AF0A31004BB93A /* AppDelegate.m in Sources */,
 				1486478918AF1EF8004BB93A /* Person.m in Sources */,
 				1486478B18AF1EF8004BB93A /* Student.m in Sources */,
-				1486479318B014F1004BB93A /* AddCourseViewController.m in Sources */,
 				1486475818AF0A31004BB93A /* main.m in Sources */,
+				1486479618B071A4004BB93A /* DeansMasterViewController.m in Sources */,
 				1486478218AF0C73004BB93A /* AddPersonViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

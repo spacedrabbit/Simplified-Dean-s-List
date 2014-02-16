@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "AddPersonViewController.h"
+#import "AddCoursesViewController.h"
 #import "University.h"
 
 @interface ViewController ()
@@ -56,6 +57,11 @@
             nextView.isStaff = TRUE;
             nextView.personArray = self.nyu.staff;
         }
+    }else if ( [[segue identifier] isEqualToString:@"addCourse"]){
+        AddCoursesViewController * nextView = [segue destinationViewController];
+        nextView.courseCatalog = self.nyu.courses;
+    }else{
+        NSLog(@"Wrong place, homie");
     }
 }
 

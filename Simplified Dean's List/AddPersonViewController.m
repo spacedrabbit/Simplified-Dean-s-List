@@ -74,32 +74,11 @@
     NSLog(@"%@", self.personArray);
 }
 
-/***********************************************
- 
-    Getting rid of the keyboard
- 
- ***********************************************/
-#warning add these to a superclass, have these subclass from it
-//touch anywhere on the view to dismiss
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    [self dismissKeyboard];
-}
-
-//easy to read method
--(void)dismissKeyboard{
-    [self.view endEditing:YES];
-}
-
-//click 'return' to dismiss keyboard as well. this method works by delegating control to the ViewController, this is a protocol method
--(BOOL)textFieldShouldReturn:(UITextField *)textField{
-    [textField resignFirstResponder];
-    //[self dismissKeyboard];
-    return TRUE;
-}
-
 /**********************************************
  
     Working with the labels and text
+ 
+    Would be nice to add this to the ViewController superclass
  
  ***********************************************/
 
@@ -122,6 +101,7 @@
     self.confirmationLabel.text = message;
 }
 
+//changing 'return' button to say 'done'
 -(void) addDoneButtonToKeyboards{
     for (UITextField* label in self.entryFields) {
         label.returnKeyType = UIReturnKeyDone;

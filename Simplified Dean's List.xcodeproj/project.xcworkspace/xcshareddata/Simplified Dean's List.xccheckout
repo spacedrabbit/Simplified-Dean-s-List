@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CE681707-1293-4AB5-B514-F8A5A295F247</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Simplified Dean's List</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DE49F86C-9C62-40A9-AE68-D0BACBE0CE7A</key>
+		<string>https://github.com/spacedrabbit/Simplified-Dean-s-List.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Simplified Dean's List.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DE49F86C-9C62-40A9-AE68-D0BACBE0CE7A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/spacedrabbit/Simplified-Dean-s-List.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DE49F86C-9C62-40A9-AE68-D0BACBE0CE7A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DE49F86C-9C62-40A9-AE68-D0BACBE0CE7A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Simplified Dean's List</string>
+		</dict>
+	</array>
+</dict>
+</plist>
