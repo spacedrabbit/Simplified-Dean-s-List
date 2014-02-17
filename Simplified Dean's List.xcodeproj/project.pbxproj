@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1444B7D918B1D01E00125D36 /* NYUTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1444B7D818B1D01E00125D36 /* NYUTableViewController.m */; };
+		1444B7DC18B1DB2D00125D36 /* NYUDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1444B7DB18B1DB2D00125D36 /* NYUDetailViewController.m */; };
 		1486474C18AF0A31004BB93A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1486474B18AF0A31004BB93A /* Foundation.framework */; };
 		1486474E18AF0A31004BB93A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1486474D18AF0A31004BB93A /* CoreGraphics.framework */; };
 		1486475018AF0A31004BB93A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1486474F18AF0A31004BB93A /* UIKit.framework */; };
@@ -45,6 +47,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1444B7D718B1D01E00125D36 /* NYUTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYUTableViewController.h; sourceTree = "<group>"; };
+		1444B7D818B1D01E00125D36 /* NYUTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYUTableViewController.m; sourceTree = "<group>"; };
+		1444B7DA18B1DB2D00125D36 /* NYUDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYUDetailViewController.h; sourceTree = "<group>"; };
+		1444B7DB18B1DB2D00125D36 /* NYUDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYUDetailViewController.m; sourceTree = "<group>"; };
 		1486474818AF0A31004BB93A /* Simplified Dean's List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simplified Dean's List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1486474B18AF0A31004BB93A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1486474D18AF0A31004BB93A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -215,6 +221,10 @@
 				1486479818B073BD004BB93A /* AddCoursesViewController.m */,
 				14A04F8E18B1911800DF8F4E /* AddPersonToCourseViewController.h */,
 				14A04F8F18B1911800DF8F4E /* AddPersonToCourseViewController.m */,
+				1444B7D718B1D01E00125D36 /* NYUTableViewController.h */,
+				1444B7D818B1D01E00125D36 /* NYUTableViewController.m */,
+				1444B7DA18B1DB2D00125D36 /* NYUDetailViewController.h */,
+				1444B7DB18B1DB2D00125D36 /* NYUDetailViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -322,7 +332,9 @@
 				14A04F9018B1911800DF8F4E /* AddPersonToCourseViewController.m in Sources */,
 				1486479918B073BD004BB93A /* AddCoursesViewController.m in Sources */,
 				1486478F18B00D0B004BB93A /* University.m in Sources */,
+				1444B7D918B1D01E00125D36 /* NYUTableViewController.m in Sources */,
 				1486479C18B07605004BB93A /* Course.m in Sources */,
+				1444B7DC18B1DB2D00125D36 /* NYUDetailViewController.m in Sources */,
 				1486476218AF0A31004BB93A /* ViewController.m in Sources */,
 				1486475C18AF0A31004BB93A /* AppDelegate.m in Sources */,
 				1486478918AF1EF8004BB93A /* Person.m in Sources */,

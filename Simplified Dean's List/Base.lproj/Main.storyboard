@@ -111,6 +111,16 @@
                                     <segue destination="gKl-C5-ZEJ" kind="push" identifier="addPersonToCourse" id="va4-T2-cPV"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KkP-KV-cWy">
+                                <rect key="frame" x="28" y="420" width="272" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="View all NYU information">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="O2j-vm-Lbl" kind="push" identifier="allInfo" id="xB6-S1-si1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -215,6 +225,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vNp-q4-0YI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="871" y="-546"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="Ghs-E8-Ced">
+            <objects>
+                <tableViewController id="O2j-vm-Lbl" customClass="NYUTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="b5W-Jq-ecW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Kuh-T3-qLZ">
+                                <rect key="frame" x="0.0" y="119" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kuh-T3-qLZ" id="5Ny-iV-gfW">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="4Mt-El-txK" kind="push" identifier="details" id="fhu-zO-ilI"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="O2j-vm-Lbl" id="t00-3R-hqj"/>
+                            <outlet property="delegate" destination="O2j-vm-Lbl" id="2Jn-lV-gxV"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="fiG-mt-K2E"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F4c-PX-6Wu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1292" y="92"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4oW-7K-EPh">
+            <objects>
+                <viewController id="4Mt-El-txK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wHt-Ep-X3d"/>
+                        <viewControllerLayoutGuide type="bottom" id="iws-wN-bbp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9zF-SO-BB0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nQl-ow-Tuu">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="S16-yB-zEe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hq6-18-vyr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1727" y="92"/>
         </scene>
         <!--Add Person To Course View Controller-->
         <scene sceneID="xRs-cg-ygt">

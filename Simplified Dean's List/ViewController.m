@@ -14,6 +14,7 @@
 #import "Course.h"
 #import "Staff.h"
 #import "Student.h"
+#import "NYUTableViewController.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) IBOutlet UIButton *addStudent;
@@ -158,7 +159,14 @@
             nextView.isStaff = FALSE;
         }
         
-    }else
+    }else if ([[segue identifier] isEqualToString:@"allInfo"]){
+        NYUTableViewController * nextView = [segue destinationViewController];
+        
+        nextView.students = self.nyu.students;
+        nextView.teachers = self.nyu.staff;
+        nextView.courses = self.nyu.courses;
+    }
+    else
     {
         NSLog(@"Wrong place, homie");
     }
