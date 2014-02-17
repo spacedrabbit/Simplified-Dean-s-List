@@ -29,6 +29,7 @@
 		1486479618B071A4004BB93A /* DeansMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1486479518B071A4004BB93A /* DeansMasterViewController.m */; };
 		1486479918B073BD004BB93A /* AddCoursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1486479818B073BD004BB93A /* AddCoursesViewController.m */; };
 		1486479C18B07605004BB93A /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 1486479B18B07605004BB93A /* Course.m */; };
+		14A04F9018B1911800DF8F4E /* AddPersonToCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A04F8F18B1911800DF8F4E /* AddPersonToCourseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		1486479818B073BD004BB93A /* AddCoursesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddCoursesViewController.m; path = ../AddCoursesViewController.m; sourceTree = "<group>"; };
 		1486479A18B07605004BB93A /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
 		1486479B18B07605004BB93A /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
+		14A04F8E18B1911800DF8F4E /* AddPersonToCourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPersonToCourseViewController.h; sourceTree = "<group>"; };
+		14A04F8F18B1911800DF8F4E /* AddPersonToCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPersonToCourseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +207,8 @@
 				1486478118AF0C73004BB93A /* AddPersonViewController.m */,
 				1486479718B073BD004BB93A /* AddCoursesViewController.h */,
 				1486479818B073BD004BB93A /* AddCoursesViewController.m */,
+				14A04F8E18B1911800DF8F4E /* AddPersonToCourseViewController.h */,
+				14A04F8F18B1911800DF8F4E /* AddPersonToCourseViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -306,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1486478A18AF1EF8004BB93A /* Staff.m in Sources */,
+				14A04F9018B1911800DF8F4E /* AddPersonToCourseViewController.m in Sources */,
 				1486479918B073BD004BB93A /* AddCoursesViewController.m in Sources */,
 				1486478F18B00D0B004BB93A /* University.m in Sources */,
 				1486479C18B07605004BB93A /* Course.m in Sources */,
@@ -524,6 +530,7 @@
 				1486477C18AF0A31004BB93A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1486477D18AF0A31004BB93A /* Build configuration list for PBXNativeTarget "Simplified Dean's ListTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +539,7 @@
 				1486477F18AF0A31004BB93A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

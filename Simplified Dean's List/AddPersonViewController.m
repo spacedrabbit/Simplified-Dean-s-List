@@ -70,10 +70,6 @@
 
 }
 
-- (IBAction)printArray:(UIButton *)sender {
-    NSLog(@"%@", self.personArray);
-}
-
 /**********************************************
  
     Working with the labels and text

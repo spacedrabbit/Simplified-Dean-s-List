@@ -10,6 +10,7 @@
 #import "Course.h"
 
 @interface AddCoursesViewController ()
+
 @property (weak, nonatomic) IBOutlet UITextField *courseName;
 @property (weak, nonatomic) IBOutlet UITextField *courseDays;
 @property (weak, nonatomic) IBOutlet UITextField *courseTimes;
@@ -28,13 +29,11 @@
 {
     [super viewDidLoad];
     [self addDoneButtonToKeyboards:self.courseTextFields];
-	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 - (IBAction)addCourse:(UIButton *)sender {
     
@@ -87,6 +86,10 @@
     for (UITextField* label in array) {
         label.returnKeyType = UIReturnKeyDone;
     }
+}
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField{
+    self.addCourseResults.text =@"";
 }
 
 @end
