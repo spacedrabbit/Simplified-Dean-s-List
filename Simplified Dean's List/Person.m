@@ -23,9 +23,6 @@
         _name = theName;
         _dateOfBirth = theDOB;
         _SSN = theSSN;
-        if (!_associatedCourses) {
-            _associatedCourses = [NSMutableArray array];
-        }
     }
     return self;
 }
@@ -39,8 +36,34 @@
     return self.name;
 }
 
-- (void)newName:(NSString *)theName{
-    _name = theName;
+-(NSMutableDictionary *)bio{
+    if (!_bio) {
+        _bio = [NSMutableDictionary dictionary];
+    }
+    return _bio;
+}
+-(NSMutableSet *)associatedCoursesSet{
+    if (!_associatedCoursesSet) {
+        _associatedCoursesSet = [NSMutableSet set];
+    }
+    return _associatedCoursesSet;
+}
+
+-(void) setUpBio: (NSString *) bio withFunFact: (NSString *) fact andDegreeEarned: (NSString *) degree {
+    
+    self.bio = [NSMutableDictionary dictionaryWithObjectsAndKeys:bio, @"Bio",fact, @"Fun Fact", degree, @"Degree", nil];
+}
+
+-(NSString *) printBio{
+    
+    NSArray * allKeys = [self.bio allKeys];
+    NSMutableString * formattedBio = [NSMutableString string];
+    
+    for ( NSString * key in allKeys) {
+        [formattedBio appendFormat:@"\n\n%@:\n\n%@\n\n",key, [self.bio objectForKey:key] ];
+    }
+    
+    return formattedBio;
 }
 
 @end

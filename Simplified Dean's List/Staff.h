@@ -12,6 +12,6 @@
 @interface Staff : Person
 
 - (void) assignToCourse: (Course *) courseName;
-- (NSArray *) showCoursesTaught;
+- (NSSet *) showCoursesTaught;
 
 @end

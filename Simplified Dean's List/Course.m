@@ -30,10 +30,10 @@
     return self.name;
 }
 
--(NSMutableArray *)students{
-    if (!_students) {
-        _students = [NSMutableArray array];
+-(NSMutableSet *)studentsSet{
+    if (!_studentsSet) {
+        _studentsSet = [NSMutableSet set];
     }
-    return _students;
+    return _studentsSet;
 }
 @end

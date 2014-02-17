@@ -55,24 +55,31 @@
     // Dispose of any resources that can be recreated.
 }
 
-#warning needs a check to make sure the same courses aren't added to the same person. Or this can be rewritten to use an NSSet
-#warning there is a bug here maybe, the details page is not getting the right course students
+/********************************************
+ 
+            Submit Button
+ 
+ ********************************************/
 
+//checks pickerView for current selections, and then adds course/people
 - (IBAction)addButton:(UIButton *)sender {
     
     //if it's a teacher
-    if (self.isStaff) {
-        //this is working
+    if (self.isStaff)
+    {
+        //adds teacher to course
         selectedCourse.teacher = selectedPerson;
     }
     //if it's a student
     else
     {
-        //this is not working
-        [selectedCourse.students addObject:selectedPerson];
+        //adds student to course
+        [selectedCourse.studentsSet addObject:selectedPerson];
+
     }
-    //this is working
-    [selectedPerson.associatedCourses addObject:selectedCourse];
+    
+    //adds course to the student or staff
+    [selectedPerson.associatedCoursesSet addObject:selectedCourse];
 }
 
 

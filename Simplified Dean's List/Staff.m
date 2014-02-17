@@ -11,10 +11,9 @@
 @implementation Staff
 
 -(void)assignToCourse:(Course *)courseName {
-    [self.associatedCourses addObject:courseName];
+    [self.associatedCoursesSet addObject:courseName];
 }
-
--(NSArray *)showCoursesTaught{
-    return self.associatedCourses;
+-(NSSet *)showCoursesTaught{
+    return self.associatedCoursesSet;
 }
 @end

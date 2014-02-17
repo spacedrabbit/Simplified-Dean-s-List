@@ -54,14 +54,17 @@
         
         Person * student = self.detailObject;
         self.navigationItem.title = student.name;
-        NSString * detailString = [NSString stringWithFormat:@"\n%@\nCourse List\n---------------------------\n%@", student.name, student.associatedCourses];
+        NSString * detailString = [NSString stringWithFormat:@"\n%@\nCourse List\n---------------------------\n%@", student.name, student.associatedCoursesSet];
         self.descriptionBox.text = detailString;
+        NSLog(@"%@", student.associatedCoursesSet);
         
     }else if(self.type == TEACHER){
         
         Person * teacher = self.detailObject;
         self.navigationItem.title = teacher.name;
-        NSString * detailString = [NSString stringWithFormat:@"\n%@\nCourses Taught\n---------------------------\n%@", teacher.name, teacher.associatedCourses];
+        NSString * detailString = [NSString stringWithFormat:@"\n%@\nCourses Taught\n---------------------------\n%@", teacher.name, teacher.associatedCoursesSet];
+        detailString = [detailString stringByAppendingString:[teacher printBio]];
+        
         self.descriptionBox.text = detailString;
         
     }
@@ -69,7 +72,7 @@
         
         Course * course = self.detailObject;
         self.navigationItem.title = course.name;
-        NSString * detailString = [NSString stringWithFormat:@"%@\n---------------------------\nTaught By: %@\n\nEnrolled Students: %@",course.name, course.teacher, course.students];
+        NSString * detailString = [NSString stringWithFormat:@"%@\n---------------------------\nTaught By: %@\n\nEnrolled Students: %@",course.name, course.teacher, course.studentsSet];
         self.descriptionBox.text = detailString;
     }
     

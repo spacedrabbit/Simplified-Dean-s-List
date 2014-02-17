@@ -17,7 +17,8 @@
 @property (strong, nonatomic) NSString * time;
 
 @property (strong, nonatomic) Person * teacher;
-@property (strong, nonatomic) NSMutableArray * students;
+
+@property (strong, nonatomic) NSMutableSet * studentsSet;
 
 - (id)initCourse: (NSString *)name locatedAt: (NSString *)location onDays: (NSString *)days atTime: (NSString *) time;
 

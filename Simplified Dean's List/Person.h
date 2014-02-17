@@ -13,10 +13,14 @@
 @property (strong, nonatomic, readonly) NSString * name;
 @property (strong, nonatomic) NSDate * dateOfBirth;
 @property (strong, nonatomic) NSString * SSN;
-@property (strong, nonatomic) NSMutableArray * associatedCourses;
-//this will be courses taught for staff and courses enrolled in for students
 
-- (void) newName:(NSString *) theName;
+@property (strong, nonatomic) NSMutableSet * associatedCoursesSet;
+//done to prevent adding multiple of the same course
+
+@property (strong, nonatomic) NSMutableDictionary * bio;
+
 - (id) initWithName: (NSString *) theName SSN: (NSString *) theSSN andDOB: (NSDate *) theDOB;
+-(void) setUpBio: (NSString *) bio withFunFact: (NSString *) fact andDegreeEarned: (NSString *) degree;
+-(NSString *) printBio;
 
 @end

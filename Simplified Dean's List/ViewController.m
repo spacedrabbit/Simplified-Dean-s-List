@@ -30,7 +30,7 @@
     self.navigationItem.title = @"Welcome to Dean's List";
     self.nyu = [University new];
     
-    //Testing arrays, comment out during actual run
+    //Pre-loaded arrays
     Course * course1 = [[Course alloc] initCourse:@"Bio 101" locatedAt:@"Bobst" onDays:@"Mon,Wed" atTime:@"12p"];
     [self.nyu.courses addObject:course1];
     
@@ -43,12 +43,15 @@
     NSLog(@"Number of Courses: %lu", [self.nyu.courses count]);
     
     Staff * staff1 = [[Staff alloc] initWithName:@"Eric Wang" SSN:@"999-999-9999" andDOB:nil];
+    [staff1 setUpBio:@"This is the body of the bio description" withFunFact:@"I Like to HangGlide" andDegreeEarned:@"MS Computer Science, NYU"];
     [self.nyu.staff addObject:staff1];
     
     staff1 = [[Staff alloc] initWithName:@"Louis Tur" SSN:@"999-999-9999" andDOB:nil];
+    [staff1 setUpBio:@"This is the body of the bio description" withFunFact:@"I have dual citizenship" andDegreeEarned:@"MS Computer Science, NYU"];
     [self.nyu.staff addObject:staff1];
     
     staff1 = [[Staff alloc] initWithName:@"Paul Park" SSN:@"999-999-9999" andDOB:nil];
+    [staff1 setUpBio:@"This is the body of the bio description" withFunFact:@"I am an eagle scout" andDegreeEarned:@"PhD Computer Science, NYU"];
     [self.nyu.staff addObject:staff1];
     
     NSLog(@"Number of Staff: %lu", [self.nyu.staff count]);
@@ -159,6 +162,7 @@
             nextView.isStaff = FALSE;
         }
         
+    // displaying all information
     }else if ([[segue identifier] isEqualToString:@"allInfo"]){
         NYUTableViewController * nextView = [segue destinationViewController];
         
@@ -166,9 +170,11 @@
         nextView.teachers = self.nyu.staff;
         nextView.courses = self.nyu.courses;
     }
+    
+    //placeholder error handler
     else
     {
-        NSLog(@"Wrong place, homie");
+        NSLog(@"Wrong place");
     }
 }
 
