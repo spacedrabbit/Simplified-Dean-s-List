@@ -10,6 +10,7 @@
 #define TEACHER 0
 #define STUDENT 1
 #define COURSES 2
+#import "NYUDetailViewController.h"
 
 @interface NYUTableViewController ()
 
@@ -90,21 +91,30 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    
+    //not really needed, but incase I add more segues
     if ([[segue identifier] isEqualToString:@"details"]) {
+        
+        //getting the pathIndex
         NSIndexPath * path = [self.tableView indexPathForSelectedRow];
-        
+        NYUDetailViewController * details = [segue destinationViewController];
+
+        //teacher section
         if (path.section == TEACHER) {
-            NSLog(@"Techer detail");
-        }else if (path.section == STUDENT){
-            NSLog(@"Student detail");
-        }else{
-            NSLog(@"Course Details");
+            [details setDetailObject:self.teachers[path.row]];
+            [details setDetailObjectType:TEACHER];
         }
-        
-        //need to send the proper information here, send the object
-        
-        //[[segue destinationViewController] set]
-        //[[segue destinationViewController] setDetailItem:object];
+        //student section
+        else if (path.section == STUDENT){
+            [details setDetailObject:self.students[path.row]];
+            [details setDetailObjectType:STUDENT];
+        }
+        //course section
+        else
+        {
+            [details setDetailObject:self.courses[path.row]];
+            [details setDetailObjectType:COURSES];
+        }
     }
 }
 

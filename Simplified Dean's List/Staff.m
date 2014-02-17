@@ -12,12 +12,9 @@
 
 -(void)assignToCourse:(Course *)courseName {
     [self.associatedCourses addObject:courseName];
-
 }
 
 -(NSArray *)showCoursesTaught{
-    
-#warning need to add course!=nil check here
     return self.associatedCourses;
 }
 @end

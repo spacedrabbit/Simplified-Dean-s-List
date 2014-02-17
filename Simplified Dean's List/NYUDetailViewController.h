@@ -10,4 +10,7 @@
 
 @interface NYUDetailViewController : DeansMasterViewController
 
+-(void) setDetailObjectType: (NSUInteger) type;
+-(void) setDetailObject: (id) detailObject;
+
 @end

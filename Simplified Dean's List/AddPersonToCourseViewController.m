@@ -56,15 +56,23 @@
 }
 
 #warning needs a check to make sure the same courses aren't added to the same person. Or this can be rewritten to use an NSSet
+#warning there is a bug here maybe, the details page is not getting the right course students
+
 - (IBAction)addButton:(UIButton *)sender {
     
+    //if it's a teacher
     if (self.isStaff) {
+        //this is working
         selectedCourse.teacher = selectedPerson;
-    }else{
+    }
+    //if it's a student
+    else
+    {
+        //this is not working
         [selectedCourse.students addObject:selectedPerson];
     }
+    //this is working
     [selectedPerson.associatedCourses addObject:selectedCourse];
-    NSLog(@"Courses taught by %@: %@", selectedPerson, selectedPerson.associatedCourses);
 }
 
 

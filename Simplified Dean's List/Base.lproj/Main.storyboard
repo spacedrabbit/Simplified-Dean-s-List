@@ -258,10 +258,10 @@
             </objects>
             <point key="canvasLocation" x="1292" y="92"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="4oW-7K-EPh">
             <objects>
-                <viewController id="4Mt-El-txK" sceneMemberID="viewController">
+                <viewController id="4Mt-El-txK" customClass="NYUDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wHt-Ep-X3d"/>
                         <viewControllerLayoutGuide type="bottom" id="iws-wN-bbp"/>
@@ -281,6 +281,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="S16-yB-zEe"/>
+                    <connections>
+                        <outlet property="descriptionBox" destination="nQl-ow-Tuu" id="vdE-5P-pTK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hq6-18-vyr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
