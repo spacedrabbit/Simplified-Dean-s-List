@@ -139,14 +139,27 @@
         AddCoursesViewController * nextView = [segue destinationViewController];
         nextView.courseCatalog = self.nyu.courses;
     
-    // assign a teach to a course
-    }else if ( [[segue identifier] isEqualToString:@"addStaffToCourses"]){
+    // assign a person to a course
+    }else if ( [[segue identifier] isEqualToString:@"addPersonToCourse"]){
         
         AddPersonToCourseViewController * nextView = [segue destinationViewController];
-        nextView.personList = self.nyu.staff;
         nextView.courseList = self.nyu.courses;
-        nextView.isStaff = TRUE;
-    }else{
+        
+        //adding a staff to a course
+        if ( [[sender currentTitle] isEqualToString:@"Assign Staff to Courses"] ){
+            nextView.personList = self.nyu.staff;
+            nextView.isStaff = TRUE;
+        }
+        
+        //adding a student to a course
+        else
+        {
+            nextView.personList = self.nyu.students;
+            nextView.isStaff = FALSE;
+        }
+        
+    }else
+    {
         NSLog(@"Wrong place, homie");
     }
 }

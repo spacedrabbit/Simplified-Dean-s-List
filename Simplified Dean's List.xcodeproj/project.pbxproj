@@ -30,6 +30,8 @@
 		1486479918B073BD004BB93A /* AddCoursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1486479818B073BD004BB93A /* AddCoursesViewController.m */; };
 		1486479C18B07605004BB93A /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 1486479B18B07605004BB93A /* Course.m */; };
 		14A04F9018B1911800DF8F4E /* AddPersonToCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A04F8F18B1911800DF8F4E /* AddPersonToCourseViewController.m */; };
+		14A04F9318B1B1C300DF8F4E /* NYUappicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 14A04F9118B1B1C300DF8F4E /* NYUappicon.png */; };
+		14A04F9418B1B1C300DF8F4E /* NYUlaunch.png in Resources */ = {isa = PBXBuildFile; fileRef = 14A04F9218B1B1C300DF8F4E /* NYUlaunch.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		1486479B18B07605004BB93A /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
 		14A04F8E18B1911800DF8F4E /* AddPersonToCourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPersonToCourseViewController.h; sourceTree = "<group>"; };
 		14A04F8F18B1911800DF8F4E /* AddPersonToCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPersonToCourseViewController.m; sourceTree = "<group>"; };
+		14A04F9118B1B1C300DF8F4E /* NYUappicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NYUappicon.png; sourceTree = "<group>"; };
+		14A04F9218B1B1C300DF8F4E /* NYUlaunch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NYUlaunch.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,8 @@
 		1486475218AF0A31004BB93A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				14A04F9118B1B1C300DF8F4E /* NYUappicon.png */,
+				14A04F9218B1B1C300DF8F4E /* NYUlaunch.png */,
 				1486475318AF0A31004BB93A /* Simplified Dean's List-Info.plist */,
 				1486475418AF0A31004BB93A /* InfoPlist.strings */,
 				1486475718AF0A31004BB93A /* main.m */,
@@ -289,9 +295,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14A04F9418B1B1C300DF8F4E /* NYUlaunch.png in Resources */,
 				1486476418AF0A31004BB93A /* Images.xcassets in Resources */,
 				1486475618AF0A31004BB93A /* InfoPlist.strings in Resources */,
 				1486475F18AF0A31004BB93A /* Main.storyboard in Resources */,
+				14A04F9318B1B1C300DF8F4E /* NYUappicon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,7 +459,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Simplified Dean's List/Simplified Dean's List-Prefix.pch";
 				INFOPLIST_FILE = "Simplified Dean's List/Simplified Dean's List-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -464,7 +474,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Simplified Dean's List/Simplified Dean's List-Prefix.pch";
 				INFOPLIST_FILE = "Simplified Dean's List/Simplified Dean's List-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
