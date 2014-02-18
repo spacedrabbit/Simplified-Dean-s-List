@@ -80,13 +80,30 @@
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    
+    switch (section) {
+        case TEACHER:
+            return @"Teachers";
+            break;
+        case STUDENT:
+            return @"Students";
+        case COURSES:
+            return @"Courses";
+            
+        default:
+            return @"No applicable cases";
+            break;
+    }
+    
+#warning example of switch
+    /*
     if (section == TEACHER) {
         return @"Teachers";
     }else if (section == STUDENT){
         return @"Students";
     }else{
         return @"Courses";
-    }
+    }*/
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

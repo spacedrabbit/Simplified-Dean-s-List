@@ -28,8 +28,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"Object: %@", self.detailObject);
-    NSLog(@"Type: %lu", self.type);
+    //NSLog(@"Object: %@", self.detailObject);
+    //NSLog(@"Type: %lu", self.type);
 
     [self printObjectDetails];
 }
